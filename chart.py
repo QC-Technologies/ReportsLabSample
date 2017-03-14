@@ -5,19 +5,18 @@
     This is an Area Chart that contains a Legend Widget to compare cost of living in paris.
 
 '''
-from reportlab.graphics.shapes import Drawing, _DrawingEditorMixin, Rect
+
 from reportlab.graphics.charts.axes import XValueAxis, YValueAxis, AdjYValueAxis, NormalDateXValueAxis
+from reportlab.graphics.charts.lineplots import LinePlot, AreaLinePlot
+from reportlab.graphics.charts.legends import LineLegend, Legend
+from reportlab.graphics.shapes import Drawing, _DrawingEditorMixin, Rect, String
 from reportlab.lib import colors
 from reportlab.lib.colors import PCMYKColor
+from reportlab.lib.formatters import DecimalFormatter
 from reportlab.lib.units import inch
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import *
 from reportlab.rl_config import defaultPageSize
-from reportlab.graphics.charts.lineplots import LinePlot, AreaLinePlot
-from reportlab.graphics.charts.legends import LineLegend, Legend
-from reportlab.graphics.shapes import Drawing, _DrawingEditorMixin, Rect, String
-from reportlab.lib.formatters import DecimalFormatter
-
 
 PAGE_HEIGHT=defaultPageSize[1]
 styles = getSampleStyleSheet()
